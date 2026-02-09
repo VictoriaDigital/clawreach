@@ -17,6 +17,8 @@ function(export)
 endfunction()
 
 add_compile_options(-Wno-unused-value)
+add_compile_options(-Wno-error=uninitialized)
+add_compile_options(-Wno-uninitialized)
 
 add_subdirectory(rlottie)
 target_link_libraries(${COMPONENT_LIB} INTERFACE rlottie)
